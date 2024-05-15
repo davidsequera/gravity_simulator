@@ -6,15 +6,15 @@
             "name": "Sun1",
             "mass": 3e30,
             "radius": 20,
-            "position": [-4, 0],
-            "velocity": [3.47113e3,5.32727e3],
+            "position": [-5984e8, 0],
+            "velocity": [3.47113e3, 5.32727e3],
             "color": [255, 255, 0]
         },
         {
             "name": "Sun2",
             "mass": 3e30,
             "radius": 20,
-            "position": [4, 0],
+            "position": [5984e8, 0],
             "velocity": [3.47113e3,5.32727e3],
             "color": [255, 155, 0]
         },

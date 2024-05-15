@@ -8,7 +8,7 @@ import numpy
 def createBodies(bodies_dict: dict):
     bodies = []
     for body in bodies_dict:
-        new_body = Body(body['name'], numpy.array(body['position'])* GravitationalSystem.AU,body['velocity'], body['radius'], body['color'], body['mass'])
+        new_body = Body(body['name'], numpy.array(body['position']),body['velocity'], body['radius'], body['color'], body['mass'])
         if 'sun' in body:
             new_body.sun = True
         bodies.append(new_body)
@@ -16,7 +16,7 @@ def createBodies(bodies_dict: dict):
 
 def main():
     # Import the gravitational system
-    with open("./examples/falling_body.json", "r") as f:
+    with open("./examples/three_suns.json", "r") as f:
         data = json.load(f)
 
     system = GravitationalSystem(data['name'], SCALE=data['scale'])
