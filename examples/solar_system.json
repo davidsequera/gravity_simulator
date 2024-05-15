@@ -15,7 +15,7 @@
             "name": "Mercury",
             "mass": 3.285e23,
             "radius": 8,
-            "position": [0.387, 0],
+            "position": [57895200000, 0],
             "velocity": [0, 47.47e3],
             "color": [80, 78, 81]
         },
@@ -23,7 +23,7 @@
             "name": "Venus",
             "mass": 4.8685e24,
             "radius": 14,
-            "position": [0.723, 0],
+            "position": [108160800000, 0],
             "velocity": [0, -35.02e3],
             "color": [255, 255, 255]
         },
@@ -31,7 +31,7 @@
             "name": "Earth",
             "mass": 5.9742e24,
             "radius": 16,
-            "position": [-1, 0],
+            "position": [-149600000000, 0],
             "velocity": [0, 29.783e3],
             "color": [100, 149, 237]
         },
@@ -39,7 +39,7 @@
             "name": "Mars",
             "mass": 6.39e23,
             "radius": 12,
-            "position": [-1.524, 0],
+            "position": [-227990400000, 0],
             "velocity": [0, 24.077e3],
             "color": [188, 39, 50]
         }
