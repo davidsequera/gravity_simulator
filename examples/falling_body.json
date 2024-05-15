@@ -1,0 +1,22 @@
+{
+    "name": "Body falling down the earth",
+    "scale": 25000,
+    "bodies" : [
+        {
+            "name": "Earth",
+            "mass": 5.9742e24,
+            "radius": 40,
+            "position": [0, 0],
+            "velocity": [0, 0],
+            "color": [100, 149, 237]
+        },
+        {
+            "name": "Falling body",
+            "mass": 100,
+            "radius": 10,
+            "position": [0.01, 0],
+            "velocity": [0, 250],
+            "color": [255, 0, 0]
+        }
+    ]
+}

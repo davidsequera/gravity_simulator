@@ -1,15 +1,42 @@
-import math
+import json
+from Body import Body
+from GravitationalSystem import GravitationalSystem
+import pygame
+import numpy
 
-def calculate_position(initial_position, initial_velocity, acceleration, time):
-    # Calculate the position using the formula: position = initial_position + initial_velocity * time + 0.5 * acceleration * time^2
-    position = initial_position + initial_velocity * time + 0.5 * acceleration * math.pow(time, 2)
-    return position
 
-# Example usage
-initial_position = 0
-initial_velocity = 10
-acceleration = -9.8  # Assuming downward acceleration due to gravity
-time = 2
+def createBodies(bodies_dict: dict):
+    bodies = []
+    for body in bodies_dict:
+        new_body = Body(body['name'], numpy.array(body['position'])* GravitationalSystem.AU,body['velocity'], body['radius'], body['color'], body['mass'])
+        if 'sun' in body:
+            new_body.sun = True
+        bodies.append(new_body)
+    return bodies
 
-final_position = calculate_position(initial_position, initial_velocity, acceleration, time)
-print(f"The final position of the object after {time} seconds is: {final_position}")
+def main():
+    # Import the gravitational system
+    with open("./examples/falling_body.json", "r") as f:
+        data = json.load(f)
+
+    system = GravitationalSystem(data['name'], SCALE=data['scale'])
+    print(system.name)
+    print(system.SCALE)
+    # Load the planets from the JSON file
+
+    WHITE = (255, 255, 255)
+    pygame.init()
+    WIDTH, HEIGHT =  800, 800
+    WIN = pygame.display.set_mode((WIDTH, HEIGHT))
+    pygame.display.set_caption("Planet Simulation")
+    FONT = pygame.font.SysFont("comicsans", 16)
+
+    planets = createBodies(data['bodies'])
+    system.bodies = planets
+    system.run(WIN, WIDTH, HEIGHT, FONT, WHITE)
+
+if __name__ == "__main__":
+    main()
+
+
+

@@ -1,0 +1,47 @@
+{
+    "name": "Solar System",
+    "scale": 250,
+    "bodies" : [
+        {
+            "name": "Sun",
+            "mass": 1.98892e30,
+            "radius": 30,
+            "sun": true,
+            "position": [0, 0],
+            "velocity": [0, 0],
+            "color": [255, 255, 0]
+        },
+        {
+            "name": "Mercury",
+            "mass": 3.285e23,
+            "radius": 8,
+            "position": [0.387, 0],
+            "velocity": [0, 47.47e3],
+            "color": [80, 78, 81]
+        },
+        {
+            "name": "Venus",
+            "mass": 4.8685e24,
+            "radius": 14,
+            "position": [0.723, 0],
+            "velocity": [0, -35.02e3],
+            "color": [255, 255, 255]
+        },
+        {
+            "name": "Earth",
+            "mass": 5.9742e24,
+            "radius": 16,
+            "position": [-1, 0],
+            "velocity": [0, 29.783e3],
+            "color": [100, 149, 237]
+        },
+        {
+            "name": "Mars",
+            "mass": 6.39e23,
+            "radius": 12,
+            "position": [-1.524, 0],
+            "velocity": [0, 24.077e3],
+            "color": [188, 39, 50]
+        }
+    ]
+}
